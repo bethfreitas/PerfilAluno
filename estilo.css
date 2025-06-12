@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+
+}
+h3 {
+    text-align: left;
+    margin-left: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 1400px;
+    height: 120;
+    max-height:1400px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.profile-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #007BFF;
+    padding: 5px;
+}
+
+.gallery {
+    text-align: center;
+}
+.gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.ucs {
+    position: relative; /* Remove posição fixa */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 20px; /* Ajusta a distância da borda esquerda */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .profile-img, .gallery img {
+        width: 120px;
+    }
+}

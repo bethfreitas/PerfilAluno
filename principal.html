@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Aluno</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Perfil do Aluno</h2>
+        <table>
+            <tr>
+                <th>Foto de Perfil</th>
+                <th>Informações</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="gallery">
+                        <div>
+                            <img id="imagemGaleria" src="imagens/foto1.jpg" alt="Imagem da Galeria">
+                        </div>
+                        <div>
+                            <button onclick="trocarImagem('imagens/fotoperfil.jpg')">O</button>
+                            <button onclick="trocarImagem('imagens/foto1.jpg')">O</button>
+                            <button onclick="trocarImagem('imagens/foto2.jpg')">O</button>
+                            <button onclick="trocarImagem('imagens/foto3.jpg')">O</button>
+                        </div>
+                    </div>
+                    <!--img src="imagens/fotoperfil.jpg" alt="Foto de Perfil" class="profile-img"-->
+                </td>
+                <td>
+                    <p><strong>Nome:</strong> Mulan</p>
+                    <p><strong>RA:</strong> 5556666</p>
+                    <p><strong>Curso:</strong> Ciência da Computação</p>
+                    <p>3.º período</p>
+                    <p><strong>E-mail:</strong> mulan@gmail.com</p>
+                    <p><strong>Endereço:</strong> Rua do Oeste, nº 10, bairro Santa Terezinha, São Paulo, SP, 05502-000</p>
+                    <label for="cpf"><b>CPF:</b></label>
+                      <input on="ValidarCPF" type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+                    <span id="cpf-error" style="color: red; display: none;">CPF inválido.</span>
+
+                </td>
+            </tr>
+        </table>
+
+        <h3>Unidades Curriculares Cursadas</h3>
+        <ul id="listaUCs" class="ucs">
+            <li>Sistemas computacionais e segurança</li>
+            <li>Modelagem de software</li>
+            <li>Programação de soluções computacionais</li>
+            <li>Ambientes computacionais e conectividade</li>
+            <li>Sistemas distribuídos e mobile (cursando)</li>
+            <li>Usabilidade, desenvolvimento Web, mobile e jogos (cursando)</li>
+        </ul>
+
+        <button onclick="adicionarUC()">Adicionar Nova UC</button>
+
+        <h3>Perfil Pessoal</h3>
+        <p>Texto sobre perfil pessoal.</p>
+
+        <h3>Perfil Profissional/Acadêmico</h3>
+        <p>Texto sobre perfil profissional/acadêmico.</p>
+
+        <h3>Links Importantes</h3>
+        <p><a href="https://www.linkedin.com/in/elizabeth-de-freitas-a-n%C3%A3o-foi-encontrada-na-minha-rede-social-linkedin-com-o-id-100010101/">LinkedIn</a></p>
+        <p><a href="https://github.com/bethfreitas">GitHub</a></p>
+    </div>
+</body>
+</html>
