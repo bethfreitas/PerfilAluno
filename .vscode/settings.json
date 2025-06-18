@@ -1,0 +1,38 @@
+{
+    "cSpell.words": [
+        "adicionar",
+        "bairro",
+        "Baixo",
+        "Ciência",
+        "Cima",
+        "Computação",
+        "computacionais",
+        "Curriculares",
+        "Cursadas",
+        "Curso",
+        "Digite",
+        "Endereço",
+        "Galeria",
+        "Imagem",
+        "Insira",
+        "inválido",
+        "lista",
+        "Modelagem",
+        "Mulan",
+        "novaimagem",
+        "Oeste",
+        "período",
+        "Programação",
+        "segurança",
+        "Sistemas",
+        "soluções",
+        "Terezinha",
+        "Unidades",
+        "Validar",
+        "válido"
+    ],
+    "terminal.integrated.automationProfile.linux": {
+      "path": "/bin/bash",
+      "args": ["-i"]
+   }
+} 
