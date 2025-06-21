@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Perfil do Aluno</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Perfil do Aluno</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Perfil do Aluno</h2>
-        <table>
-            <tr>
-                <th>Foto de Perfil</th>
-                <th>Informações</th>
-            </tr>
-            <tr>
-                <td>
-                    <div class="gallery">
-                        <div>
-                            <img id="imagemGaleria" src="imagens/foto1.jpg" alt="Imagem da Galeria">
-                        </div>
-                        <div>
-                            <button onclick="trocarImagem('imagens/fotoperfil.jpg')">O</button>
-                            <button onclick="trocarImagem('imagens/foto1.jpg')">O</button>
-                            <button onclick="trocarImagem('imagens/foto2.jpg')">O</button>
-                            <button onclick="trocarImagem('imagens/foto3.jpg')">O</button>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <p><strong>Nome:</strong> Mulan</p>
-                    <p><strong>RA:</strong> 5556666</p>
-                    <p><strong>Curso:</strong> Ciência da Computação</p>
-                    <p>3.º período</p>
-                    <p><strong>E-mail:</strong> 
-                        
-                    <input type="email" id="email" placeholder="Digite seu e-mail" valor="mulan@gmail.com" onblur="validarEmail()"></p>
-                    <p><strong>Endereço:</strong> Rua do Oeste , nº 10 , bairro Santa Terezinha, São Paulo, SP, 05502-000</p>
-                    <label for="cpf"><b>CPF:</b></label>
-                    <input on="ValidarCPF" type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
-                    <span id="cpf-error" style="color: red; display: none;">CPF inválido.</span>
-
-                </td>
+  <div class="container">
+    <h2>Perfil do Aluno</h2>
+    <table>
+        <tr>
+          <th>Foto de Perfil</th>
+          <th>Informações</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="gallery">
+              <div>
+                <img id="imagemGaleria" src="imagens/foto1.jpg" alt="Imagem da Galeria">
+              </div>
+              <div>
+                <button onclick="trocarImagem('imagens/fotoperfil.jpg')">O</button>
+                <button onclick="trocarImagem('imagens/foto1.jpg')">O</button>
+                <button onclick="trocarImagem('imagens/foto2.jpg')">O</button>
+                <button onclick="trocarImagem('imagens/foto3.jpg')">O</button>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p><strong>Nome:</strong> Mulan</p>
+            <p><strong>RA:</strong> 5556666</p>
+            <p><strong>Curso:</strong> Ciência da Computação</p>
+            <p>3.º período</p>
+            <p><strong>E-mail:</strong> 
+                <input type="email" id="email" placeholder="Digite seu e-mail" value="mulan@gmail.com" onblur="validarEmail()">
+            </p>  
+            <p><strong>Endereço:</strong> Rua do Oeste , nº 10 , bairro Santa Terezinha, São Paulo, SP, 05502-000</p>
+                <label for="cpf"><b>CPF:</b></label>
+                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" onblur="validarCPF()">
+                <span id="cpf-error" style="color: red; display: none;">CPF inválido.</span>
+            </td>
             </tr>
         </table>
 
-        <h3>Unidades Curriculares Cursadas</h3>
-        <ul id="listaUCs" class="ucs">
-          <li>Sistemas computacionais e segurança</li>
-          <li>Modelagem de software</li>
-          <li>Programação de soluções computacionais</li>
-          <li>Ambientes computacionais e conectividade</li>
-          <li>Sistemas distribuídos e mobile (cursando)</li>
-          <li>Usabilidade, desenvolvimento Web, mobile e jogos (cursando)</li>
-        </ul>
+        <section>
+            <h3>Unidades Curriculares Cursadas</h3>
+            <ul id="listaUCs" class="ucs">
+              <li draggable="true">Sistemas computacionais e segurança</li>
+              <li draggable="true">Modelagem de software</li>
+              <li draggable="true">Programação de soluções computacionais</li>
+              <li draggable="true">Ambientes computacionais e conectividade</li>
+              <li draggable="true">Sistemas distribuídos e mobile (cursando)</li>
+              <li draggable="true">Usabilidade, desenvolvimento Web, mobile e jogos (cursando)</li>
+            </ul>
 
-        <button onclick="adicionarUC()">Adicionar Nova UC</button>
-  
+            <button onclick="adicionarUC()">Adicionar Nova UC</button>
+        </section>
+
         <h3>Perfil Pessoal</h3>
-        <div id="perfilPessoal">
-         <p>Texto sobre perfil pessoal.</p>
-        </div>
-        <input type="text" id="novaDescriçao" placeholder="Digite seu perfil pessoal">
-        <button onclick="adicionarDescriçao()">Adicionar Descriçao</button>
-
+        <p id="perfilPessoal" contenteditable="true">Mulan Mulan é uma jovem determinada, de espírito livre e mente estratégica. Cresceu em um ambiente tradicional, mas nunca se limitou aos papéis esperados pela sociedade. Possui um profundo senso de responsabilidade com a família e demonstra coragem ao desafiar as convenções para proteger quem ama. Sua personalidade é marcada por empatia, inteligência prática e uma incrível capacidade de adaptação.</p>
+         
         <h3>Perfil Profissional/Acadêmico</h3>
-         <p>Texto sobre perfil profissional/acadêmico.</p>
-
+        <p id="perfilProfissional" contenteditable="true">Com um perfil técnico sólido e foco em resolução de problemas, Mulan demonstra habilidades em desenvolvimento web, lógica computacional e interação com interfaces dinâmicas. Atuando como desenvolvedora front-end em formação, é capaz de integrar HTML, CSS e JavaScript para criar soluções funcionais, acessíveis e visualmente coerentes.Uma profissional com espírito analítico, que alia coragem e a busca de conhecimentos para entregar resultados.</p>
+        
+        <h3>Adicionar Nova Descrição</h3>
+        <div id="blocoDescricao">
+            <input type="text" id="inputDescricao" placeholder="Digite Nova Descrição">
+            <button onclick="salvarDescricao()">Salvar Descriçao</button>
+            <div id="listaDescricao"></div>
+        </div >
+        
         <h3>Links Importantes</h3>
-        <p><a href="https://www.linkedin.com/Elizabeth freitas-0112611b3">Linkedin</a></p>
+        <p><a href="https://www.linkedin.com/in/elizabeth-freitas-0112611b3">Linkedin</a></p>
         <p><a href="https://github.com/bethfreitas">GitHub</a></p>
     </div>
 </body>

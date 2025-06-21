@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-
+    font-size: larger;
 }
 h3 {
     text-align: left;
@@ -19,6 +19,14 @@ h3 {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+#perfilPessoal,
+#perfilProfissional {
+    margin-left: 20px;
+}
+
+a {
+    margin-left: 20px;
 }
 
 table {
@@ -75,11 +83,60 @@ button:hover {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
 }
+#listaUCs li {
+    pointer-events: auto;
+    user-select: none;
+    background-color: #e6f3ff;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 6px;
+    list-style-type: disc;
+    cursor: grab;
+}
+#listaUCs li.arrastando{
+    opacity: 0.5;
+    border: 1px dashed #007BFF;
+}
+#blocoDescriçao {
+    margin: 20px;
+}
+#inputDescricao {
+    width: 60%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 4px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#listaDescricao p,
+#listaPerfilPessoal p { 
+    background: #e8f0fe;
+    border-left: 4px solid #007BFF;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
     }
-    .profile-img, .gallery img {
+    .profile-img,
+    .gallery img {
         width: 120px;
     }
+    inputDescricao {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+section,
+#blocoDescriçao,
+#blocoPerfilPessoal { 
+    margin: 30px;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
 }
