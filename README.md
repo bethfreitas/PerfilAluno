@@ -23,7 +23,8 @@ Este é um projeto em HTML, CSS e JavaScript criado para exibir o perfil de um(a
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/perfil-aluno.git
+   git clone https://github.com/CVhttps://github.com/bethfreitas/PerfilAluno
+
 
 
 Estrutura do projeto
